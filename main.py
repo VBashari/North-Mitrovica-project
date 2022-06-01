@@ -1,5 +1,6 @@
 import pygame
 import graphics_display
+import city_map
 
 pygame.display.set_caption("North Mitrovica")
 clock = pygame.time.Clock()
@@ -8,7 +9,8 @@ clock = pygame.time.Clock()
 def main():
     while True:
         clock.tick(40)
-        graphics_display.bridge_display()
+        #graphics_display.shop_display()
+        city_map.travel_map()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
