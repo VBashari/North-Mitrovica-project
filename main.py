@@ -9,7 +9,7 @@ clock = pygame.time.Clock()
 def main():
     while True:
         clock.tick(40)
-        #graphics_display.shop_display()
+        #graphics_display.miners_display()
         city_map.travel_map()
 
         for event in pygame.event.get():
