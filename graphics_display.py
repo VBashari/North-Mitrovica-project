@@ -10,14 +10,14 @@ GREEN = (224, 248, 207)
 DARK_GREEN = (48, 104, 80)
 
 # ---
-# window
+# Window
 # ---
 window_size = (700, 700)
 window = pygame.display.set_mode(window_size)
 
 
 # ---
-# global assets
+# Global assets
 # ---
 
 class Image(pygame.sprite.Sprite):
@@ -32,7 +32,6 @@ class Image(pygame.sprite.Sprite):
         window.blit(self.img, self.rect)
 
 
-player = Image("person1.png", SQUARE_SCALE)
 person_1 = Image("person2.png", SQUARE_SCALE)
 person_2 = Image("person4.png", SQUARE_SCALE)
 person_3 = Image("person5.png", SQUARE_SCALE)
@@ -74,10 +73,7 @@ def map_display():
 # ---
 # Bridge
 # ---
-water_1 = Image("water 1.png", SQUARE_SCALE)
-water_2 = Image("water 2.png", SQUARE_SCALE)
-water_3 = Image("water 3.png", SQUARE_SCALE)
-water_sprites = [water_1, water_2, water_3]
+water = Image("water.png", SQUARE_SCALE)
 
 old_man = Image("person3.png", SQUARE_SCALE)
 ground = Image("ground.png", SQUARE_SCALE)
@@ -85,11 +81,13 @@ shop = Image("building1.png", (144, 144))
 back_bridge = Image("bridge1.png", (63, 27))
 front_bridge = Image("bridge2.png", (63, 48))
 
+bridge_collision = [old_man, shop, back_bridge, front_bridge]
+
 
 def bridge_display():
     for i in range(int(window_size[0] / SQUARE_SCALE[0])):
         for j in range(int(window_size[0] / SQUARE_SCALE[0])):
-            random.choice(water_sprites).draw((i * SQUARE_SCALE[0], j * SQUARE_SCALE[0]))
+            water.draw((i * SQUARE_SCALE[0], j * SQUARE_SCALE[0]))
 
     for i in range(int(window_size[0] / SQUARE_SCALE[0])):
         for j in range(5):
