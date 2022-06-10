@@ -1,15 +1,15 @@
 import sys
 import pygame
 import graphics_display as graphs
+import dialogues as diag
+import sections
 from player_class import Player
 
 pygame.display.set_caption("North Mitrovica")
 clock = pygame.time.Clock()
-FPS = 30
+FPS = 60
 
 user = Player(600, 350)
-
-# class Scene_Manager():
 
 
 def main():
@@ -23,9 +23,21 @@ def main():
 
         graphs.bridge_display()
 
-        user.update(graphs.bridge_collision)
+        user.update()
 
-        user.draw(user.rect)
+        if user.rect.colliderect(graphs.old_man):
+            diag.display_dialogue(graphs.window, diag.old_man_diag, graphs.GREEN, graphs.DARK_GREEN)
+            user.rect.x += 50
+
+        if user.rect.colliderect(graphs.shop):
+            while True:
+                key_pressed = pygame.key.get_pressed()
+                sections.shop_section(graphs.window)
+
+                if key_pressed[pygame.K_ESCAPE]:
+                    user.rect.y += 50
+                    break
+
         pygame.display.update()
 
 

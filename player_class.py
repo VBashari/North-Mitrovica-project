@@ -11,23 +11,16 @@ class Player(Image):
         self.rect.x = x_pos
         self.rect.y = y_pos
 
-    def collision(self, object_list):
-        if self.rect.collidelist(object_list):
-            return True
-        else:
-            return False
-
-    def update(self, object_list):
+    def update(self):
         key_pressed = pygame.key.get_pressed()
 
-        if self.collision(object_list):
-            if key_pressed[pygame.K_a] and self.rect.x > 0:
-                self.rect.x -= VEL
-            if key_pressed[pygame.K_d] and self.rect.x + self.img.get_width() + VEL < window_size[0]:
-                self.rect.x += VEL
-            if key_pressed[pygame.K_w] and self.rect.y > 0:
-                self.rect.y -= VEL
-            if key_pressed[pygame.K_s] and self.rect.y + self.img.get_height() + VEL < window_size[1]:
-                self.rect.y += VEL
+        if key_pressed[pygame.K_a] and self.rect.x > 0:
+            self.rect.move_ip(-VEL, 0)
+        if key_pressed[pygame.K_d] and self.rect.x + self.img.get_width() + VEL < window_size[0]:
+            self.rect.move_ip(VEL, 0)
+        if key_pressed[pygame.K_w] and self.rect.y > 0:
+            self.rect.move_ip(0, -VEL)
+        if key_pressed[pygame.K_s] and self.rect.y + self.img.get_height() + VEL < window_size[1]:
+            self.rect.move_ip(0, VEL)
 
-
+        self.draw(self.rect)
