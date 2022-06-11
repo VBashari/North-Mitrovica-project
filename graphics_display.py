@@ -6,8 +6,10 @@ pygame.init()
 
 SQUARE_SCALE = (50, 50)
 BUTTON_SCALE = (100, 50)
+
 GREEN = (224, 248, 207)
 DARK_GREEN = (48, 104, 80)
+LIGHT_GREEN = (224, 248, 207)
 
 # ---
 # Window
@@ -158,6 +160,7 @@ def shop_display():
 jukebox = Image("jukebox.png", (50, 60))
 guitar = Image("guitar.png", (72, 36))
 stage = Image("stage.png", (471, 150))
+person_group = Image("person_group.png", (124, 100))
 
 
 def rock_school_display():
@@ -176,10 +179,7 @@ def rock_school_display():
     guitar.draw((guitar.img.get_width() * 9, window_size[0] / 3 + 70))
     person_2.draw((person_2.img.get_width() * 7, window_size[0] / 3 + 55))
 
-    # teen group
-    person_1.draw((person_1.img.get_width() * 3, window_size[0] / 2 + 30))
-    person_2.draw((person_2.img.get_width() * 2, window_size[0] / 2 + 55))
-    person_3.draw((person_2.img.get_width() * 3.7, window_size[0] / 2 + 70))
+    person_group.draw((window_size[0] / 5, window_size[1] / 4 * 2.3))
 
     pygame.display.update()
 
