@@ -4,6 +4,7 @@ import sections as sect
 from player_class import Player
 
 pygame.display.set_caption("Traveller's Journey")
+
 clock = pygame.time.Clock()
 FPS = 60
 

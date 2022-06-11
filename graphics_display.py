@@ -21,7 +21,6 @@ window = pygame.display.set_mode(window_size)
 # ---
 # Global assets
 # ---
-
 class Image(pygame.sprite.Sprite):
     def __init__(self, file, dimensions):
         pygame.sprite.Sprite.__init__(self)
@@ -51,7 +50,6 @@ def draw_grass():
 # ---
 # Map
 # ---
-
 city_map = Image("map.png", (580, 460))
 sign1 = Image("sign1.png", BUTTON_SCALE)
 sign2 = Image("sign2.png", BUTTON_SCALE)
@@ -73,7 +71,7 @@ def map_display():
 
 
 # ---
-# Bridge
+# Bridge section
 # ---
 water = Image("water.png", SQUARE_SCALE)
 
@@ -106,7 +104,7 @@ def bridge_display():
 
 
 # ---
-# Shop
+# Shop section
 # ---
 
 clerk = Image("person2.png", (150, 180))
@@ -155,7 +153,7 @@ def shop_display():
 
 
 # ---
-# School of Rock
+# Rock School section
 # ---
 jukebox = Image("jukebox.png", (50, 60))
 guitar = Image("guitar.png", (72, 36))
@@ -185,7 +183,7 @@ def rock_school_display():
 
 
 # ---
-# Football stadium
+# Stadium section
 # ---
 ticket_booth = Image("ticket booth.png", (window_size[0], 400))
 gate = Image("gate.png", (90, 45))
@@ -210,7 +208,7 @@ def stadium_display():
 
 
 # ---
-# Miner's monument
+# Miners monument section
 # ---
 monument = Image("monument.png", (301, 269))
 plaque = Image("plaque.png", SQUARE_SCALE)
