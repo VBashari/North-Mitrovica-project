@@ -1,6 +1,6 @@
 import sys
 import pygame
-import sections as sect
+import play_sections as sect
 from player_class import Player
 
 pygame.display.set_caption("Traveller's Journey")
