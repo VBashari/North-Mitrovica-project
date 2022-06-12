@@ -33,7 +33,9 @@ old_man_diag_intro = ['Umm, excuse me, sir?', 'Old man:\nWhat do you want, kid, 
                       'Old man:\nYour desire to move forward will be questioned.', 'Thank you very much, sir, I will keep that in mind.',
                       'Old man:\nGood luck traveller. Now let me sleep in peace.']
 
-old_man_diag = ['Huh? Oh it\'s you again.', 'Just don\'t forget the map I gave ya, and you\'ll be fine.', 'Go now, let me rest in peace.']
+old_man_diag = ['Old man:\nHuh? Oh it\'s you again.', 'Old man:\nJust don\'t forget the map I gave ya, and you\'ll be fine.', 'Old man:\nGo now, '
+                                                                                                                              'let me rest in '
+                                                                                                                              'peace.']
 
 rock_school_diag_intro = ['Kid:\nOh, hey there, stranger!', 'Kid:\nAre you here to listen to our concert later tonight?',
                           'Kid:\nThey\'ve gotten quite popular recently.', 'Kid:\nI\'m glad our school is growing! It kind of reminds me of the '
