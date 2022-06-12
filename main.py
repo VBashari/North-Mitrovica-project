@@ -20,7 +20,7 @@ def main():
                 pygame.quit()
                 sys.exit()
 
-        sect.bridge_section(user)
+        sect.miners_section(user)
 
 
 if __name__ == "__main__":

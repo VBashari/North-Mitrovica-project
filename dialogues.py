@@ -44,6 +44,15 @@ rock_school_diag_intro = ['Kid:\nOh, hey there, stranger!', 'Kid:\nAre you here 
 
 rock_school_diag = ['Kid:\nOh, hi!', 'Kid:\nDon\'t forget to attend our concert later.']
 
+miners_diag_intro = ['Old lady:\nHey, dear. Think you can help me?', 'Old lady:\nThere\'s an inscription on the plate here, but I can\'t read it.',
+                     'Old lady:\nI seem to have forgotten my glasses.', 'Sure, ma\'am.']
+
+miners_diag_win = ['Old lady:\nBlejimo, brate!', 'You can speak serbian?', 'Old lady:\nOh no, not a lick.', 'Old lady:\nBut everyone I meet says '
+                                                                                                            'it, so it got stuck in my head.',
+                   'Old lady:\nThey all seemed friendly when they said it, so I can only assume it\'s a positive saying.', 'Huh, good to know.']
+
+miners_diag = ['Old lady:\nThank you for your help, sweetheart!']
+
 
 # ---
 # Dialogue functions

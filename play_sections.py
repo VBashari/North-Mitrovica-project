@@ -1,6 +1,7 @@
 import pygame
 import dialogues as diag
 import graphics_display as graphs
+import puzzles
 
 interaction_counter = 0
 
@@ -67,7 +68,22 @@ def stadium_section(user):
 
 
 def miners_section(user):
+    global interaction_counter
     graphs.miners_display()
     user.update()
+
+    if user.rect.colliderect(graphs.person_3):
+        if interaction_counter == 0:
+            diag.display_dialogue(graphs.window, diag.miners_diag_intro, graphs.GREEN, graphs.DARK_GREEN)
+            puzzles.word_search_puzzle(graphs.window)
+
+            graphs.miners_display()
+            user.update()
+            diag.display_dialogue(graphs.window, diag.miners_diag_win, graphs.GREEN, graphs.DARK_GREEN)
+            interaction_counter += 1
+        else:
+            diag.display_dialogue(graphs.window, diag.miners_diag, graphs.GREEN, graphs.DARK_GREEN)
+
+        user.rect.x += 50
 
     pygame.display.update(user)
