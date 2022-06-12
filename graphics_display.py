@@ -24,7 +24,7 @@ window = pygame.display.set_mode(window_size)
 class Image(pygame.sprite.Sprite):
     def __init__(self, file, dimensions):
         pygame.sprite.Sprite.__init__(self)
-        self.img = pygame.transform.scale(pygame.image.load(os.path.join("Assets", file)).convert_alpha(), dimensions)
+        self.img = pygame.transform.scale(pygame.image.load(os.path.join("Assets/Graphics", file)).convert_alpha(), dimensions)
         self.rect = self.img.get_rect()
 
     def draw(self, position):
@@ -118,7 +118,7 @@ inside_wall = Image("inside_wall.png", (550, 440))
 shop_items = [plate, bag, cifteli, mini_miners]
 
 pygame.init()
-pixel_font = pygame.font.Font("Grand9K Pixel.ttf", 20)
+pixel_font = pygame.font.Font("Assets/Grand9K Pixel.ttf", 20)
 price1 = pixel_font.render(" 250 ", True, GREEN, DARK_GREEN)
 price2 = pixel_font.render(" 300 ", True, GREEN, DARK_GREEN)
 price3 = pixel_font.render(" 250 ", True, GREEN, DARK_GREEN)

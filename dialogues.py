@@ -4,7 +4,7 @@ import textwrap
 import graphics_display as graphs
 
 pygame.init()
-pixel_font = pygame.font.Font("Grand9K Pixel.ttf", 20)
+pixel_font = pygame.font.Font("Assets/Grand9K Pixel.ttf", 20)
 
 dialogue_box = pygame.Rect((0, 0), (500, 150))
 dialogue_box.center = (graphs.window_size[0] / 2, graphs.window_size[1] / 2 * 1.7)
