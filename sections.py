@@ -2,13 +2,21 @@ import pygame
 import dialogues as diag
 import graphics_display as graphs
 
+interaction_counter = 0
+
 
 def bridge_section(user):
+    global interaction_counter
     graphs.bridge_display()
     user.update()
 
     if user.rect.colliderect(graphs.old_man):
-        diag.display_dialogue(graphs.window, diag.old_man_diag, graphs.GREEN, graphs.DARK_GREEN)
+        if interaction_counter == 0:
+            diag.display_dialogue(graphs.window, diag.old_man_diag_intro, graphs.GREEN, graphs.DARK_GREEN)
+            interaction_counter += 1
+        else:
+            diag.display_dialogue(graphs.window, diag.old_man_diag, graphs.GREEN, graphs.DARK_GREEN)
+
         user.rect.x += 50
 
     if user.rect.colliderect(graphs.shop):
@@ -36,11 +44,16 @@ def shop_section(surface):
 
 
 def rock_school_section(user):
+    global interaction_counter
     graphs.rock_school_display()
     user.update()
 
     if user.rect.colliderect(graphs.person_group):
-        diag.display_dialogue(graphs.window, diag.rock_school_diag, graphs.GREEN, graphs.DARK_GREEN)
+        if interaction_counter == 0:
+            diag.display_dialogue(graphs.window, diag.rock_school_diag_intro, graphs.GREEN, graphs.DARK_GREEN)
+            interaction_counter += 1
+        else:
+            diag.display_dialogue(graphs.window, diag.rock_school_diag, graphs.GREEN, graphs.DARK_GREEN)
         user.rect.x += 50
 
     pygame.display.update(user)
